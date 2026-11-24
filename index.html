@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plataforma de inscripción rápida a eventos universitarios PUCE.">
+    <title>Eventos PUCE | Inscripción rápida</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <div class="screens">
+
+            <!-- PANTALLA 1: INICIO -->
+            <article class="screen" id="inicio">
+
+                <header class="screen-header">
+                    <a href="#inicio" class="logo">PUCE</a>
+                    <span class="header-label">Eventos universitarios</span>
+                </header>
+
+                <section class="welcome">
+                    <p class="eyebrow">PLATAFORMA DE EVENTOS</p>
+                    <h1>¡Hola, Mateo!</h1>
+                    <p>Inscríbete fácilmente a los eventos de tu universidad.</p>
+                </section>
+
+                <nav class="quick-navigation" aria-label="Accesos rápidos">
+                    <a href="#explorar" class="primary-button">
+                        Explorar eventos
+                    </a>
+
+                    <a href="#confirmacion" class="secondary-button">
+                        Mis inscripciones
+                    </a>
+
+                    <a href="#inicio" class="secondary-button">
+                        Mi cuenta
+                    </a>
+                </nav>
+
+                <section class="home-events">
+                    <div class="section-heading">
+                        <h2>Eventos</h2>
+                        <a href="#explorar">Ver todos</a>
+                    </div>
+
+                    <article class="event-card">
+                        <span class="category">Destacados</span>
+                        <h3>Descubre nuevas experiencias</h3>
+                        <p>Participa en las actividades de la comunidad PUCE.</p>
+                        <a href="#explorar" class="text-link">
+                            Explorar más eventos →
+                        </a>
+                    </article>
+                </section>
+
+                <footer class="screen-footer">
+                    <nav aria-label="Navegación principal">
+                        <a href="#inicio" aria-current="page">Inicio</a>
+                        <a href="#explorar">Eventos</a>
+                        <a href="#confirmacion">Inscripciones</a>
+                        <a href="#inicio">Mi cuenta</a>
+                    </nav>
+                </footer>
+
+            </article>
+
+
+            <!-- PANTALLA 2: EXPLORAR EVENTOS -->
+            <article class="screen" id="explorar">
+
+                <header class="screen-header">
+                    <a href="#inicio" class="back-link">← Inicio</a>
+                    <h1>Explorar eventos</h1>
+                </header>
+
+                <nav class="categories" aria-label="Categorías de eventos">
+                    <a href="#eventos-lista" class="category-active">Todos</a>
+                    <a href="#eventos-lista">Académicos</a>
+                    <a href="#eventos-lista">Culturales</a>
+                </nav>
+
+                <section class="events-list" id="eventos-lista">
+                    <h2>Eventos disponibles</h2>
+
+                    <article class="event-card">
+                        <span class="category">Académico</span>
+                        <h3>Nombre del evento 1</h3>
+                        <ul class="event-information">
+                            <li>📅 Fecha: Por confirmar</li>
+                            <li>🕒 Hora: Por confirmar</li>
+                            <li>📍 Lugar: PUCE</li>
+                        </ul>
+                        <a href="#detalle" class="primary-button">
+                            Ver detalles
+                        </a>
+                    </article>
+
+                    <article class="event-card">
+                        <span class="category">Cultural</span>
+                        <h3>Nombre del evento 2</h3>
+                        <ul class="event-information">
+                            <li>📅 Fecha: Por confirmar</li>
+                            <li>🕒 Hora: Por confirmar</li>
+                            <li>📍 Lugar: PUCE</li>
+                        </ul>
+                        <a href="#detalle" class="primary-button">
+                            Ver detalles
+                        </a>
+                    </article>
+
+                    <article class="event-card">
+                        <span class="category">Deportivo</span>
+                        <h3>Nombre del evento 3</h3>
+                        <ul class="event-information">
+                            <li>📅 Fecha: Por confirmar</li>
+                            <li>🕒 Hora: Por confirmar</li>
+                            <li>📍 Lugar: PUCE</li>
+                        </ul>
+                        <a href="#detalle" class="primary-button">
+                            Ver detalles
+                        </a>
+                    </article>
+                </section>
+
+                <footer class="screen-footer">
+                    <nav aria-label="Navegación principal">
+                        <a href="#inicio">Inicio</a>
+                        <a href="#explorar" aria-current="page">Eventos</a>
+                        <a href="#confirmacion">Inscripciones</a>
+                        <a href="#inicio">Mi cuenta</a>
+                    </nav>
+                </footer>
+
+            </article>
+
+
+            <!-- PANTALLA 3: DETALLE DEL EVENTO -->
+            <article class="screen" id="detalle">
+
+                <header class="screen-header">
+                    <a href="#explorar" class="back-link">← Volver a eventos</a>
+                    <p class="eyebrow">DETALLES DEL EVENTO</p>
+                    <h1>Nombre del evento</h1>
+                </header>
+
+                <section class="event-detail">
+                    <span class="category">Académico</span>
+
+                    <h2>Información del evento</h2>
+
+                    <ul class="detail-list">
+                        <li>
+                            <strong>Fecha</strong>
+                            <span>Por confirmar</span>
+                        </li>
+
+                        <li>
+                            <strong>Hora (inicio - fin)</strong>
+                            <span>Por confirmar</span>
+                        </li>
+
+                        <li>
+                            <strong>Lugar</strong>
+                            <span>PUCE</span>
+                        </li>
+
+                        <li>
+                            <strong>Disponibilidad</strong>
+                            <span>Cupos disponibles</span>
+                        </li>
+                    </ul>
+
+                    <a href="#confirmacion" class="primary-button register-button">
+                        Inscribirme
+                    </a>
+                </section>
+
+                <footer class="screen-footer">
+                    <nav aria-label="Navegación principal">
+                        <a href="#inicio">Inicio</a>
+                        <a href="#explorar">Eventos</a>
+                        <a href="#confirmacion">Inscripciones</a>
+                        <a href="#inicio">Mi cuenta</a>
+                    </nav>
+                </footer>
+
+            </article>
+
+
+            <!-- PANTALLA 4: CONFIRMACIÓN -->
+            <article class="screen" id="confirmacion">
+
+                <header class="screen-header">
+                    <a href="#explorar" class="back-link">← Eventos</a>
+                    <p class="eyebrow">CONFIRMACIÓN</p>
+                </header>
+
+                <section class="confirmation">
+
+                    <div class="success-icon" aria-hidden="true">
+                        ✓
+                    </div>
+
+                    <h1>¡Cupo reservado!</h1>
+
+                    <p class="success-message">
+                        Tu inscripción está confirmada.
+                    </p>
+
+                    <div class="confirmation-card">
+                        <span class="category">Inscripción confirmada</span>
+
+                        <h2>Nombre del evento</h2>
+
+                        <p>
+                            <strong>Tipo:</strong> Presencial
+                        </p>
+                    </div>
+
+                    <p class="confirmation-note">
+                        Te enviaremos la confirmación a tu correo institucional.
+                    </p>
+
+                    <a href="#confirmacion" class="primary-button">
+                        Ver mis inscripciones
+                    </a>
+
+                    <a href="#explorar" class="secondary-button">
+                        Explorar más eventos
+                    </a>
+
+                </section>
+
+                <footer class="screen-footer">
+                    <nav aria-label="Navegación principal">
+                        <a href="#inicio">Inicio</a>
+                        <a href="#explorar">Eventos</a>
+                        <a href="#confirmacion" aria-current="page">
+                            Inscripciones
+                        </a>
+                        <a href="#inicio">Mi cuenta</a>
+                    </nav>
+                </footer>
+
+            </article>
+
+        </div>
+
+    </main>
+
+</body>
+</html>

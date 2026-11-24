@@ -1,0 +1,469 @@
+
+/* =====================================
+   1. VARIABLES Y CONFIGURACIÓN GENERAL
+===================================== */
+
+:root {
+    --azul: #163a7a;
+    --verde-menta: #41bfbc;
+    --blanco: #ffffff;
+    --fondo: #f3f6fb;
+    --gris: #5b6472;
+    --borde: #dce3ed;
+    --verde-oscuro: #087b78;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--azul);
+    background-color: var(--fondo);
+}
+
+/* =====================================
+   2. ACCESIBILIDAD Y FOCO DE TECLADO
+===================================== */
+
+a,
+button,
+input {
+    font: inherit;
+}
+
+a {
+    color: var(--azul);
+    text-decoration: none;
+}
+
+a:focus,
+button:focus,
+input:focus {
+    outline: 3px solid var(--azul);
+    outline-offset: 4px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid var(--azul);
+    outline-offset: 4px;
+}
+
+/* =====================================
+   3. ESTRUCTURA PRINCIPAL
+===================================== */
+
+.app {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.screens {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 720px;
+    padding: 24px;
+    background-color: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(22, 58, 122, 0.08);
+    scroll-margin-top: 20px;
+}
+
+/* =====================================
+   4. HEADER
+===================================== */
+
+.screen-header {
+    margin-bottom: 24px;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 65px;
+    min-height: 48px;
+    padding: 8px 14px;
+    color: var(--blanco);
+    background-color: var(--azul);
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.header-label {
+    display: block;
+    margin-top: 8px;
+    color: var(--gris);
+    font-size: 14px;
+}
+
+h1 {
+    margin: 8px 0;
+    font-size: 28px;
+    line-height: 1.25;
+}
+
+h2 {
+    margin-bottom: 14px;
+    font-size: 21px;
+}
+
+h3 {
+    margin: 8px 0;
+    font-size: 18px;
+}
+
+.eyebrow {
+    margin-top: 14px;
+    color: var(--verde-oscuro);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 48px;
+    font-weight: bold;
+}
+
+/* =====================================
+   5. BOTONES Y ENLACES
+===================================== */
+
+.primary-button,
+.secondary-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 18px;
+    margin-top: 12px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.primary-button {
+    color: var(--blanco);
+    background-color: var(--azul);
+    border: 2px solid var(--azul);
+}
+
+.primary-button:hover {
+    background-color: #0e2b5c;
+}
+
+.secondary-button {
+    color: var(--azul);
+    background-color: var(--blanco);
+    border: 2px solid var(--azul);
+}
+
+.secondary-button:hover {
+    background-color: #edf3fc;
+}
+
+.text-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 48px;
+    font-weight: bold;
+}
+
+/* =====================================
+   6. INICIO
+===================================== */
+
+.welcome {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #edf3fc;
+    border-left: 5px solid var(--verde-menta);
+    border-radius: 10px;
+}
+
+.welcome p {
+    color: var(--gris);
+}
+
+.quick-navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 30px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.section-heading a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 48px;
+    font-weight: bold;
+}
+
+/* =====================================
+   7. CATEGORÍAS Y EVENTOS
+===================================== */
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.categories a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 8px 14px;
+    border: 1px solid var(--borde);
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.categories a:hover,
+.categories .category-active {
+    color: var(--blanco);
+    background-color: var(--azul);
+    border-color: var(--azul);
+}
+
+.events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.event-card {
+    padding: 18px;
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    background-color: var(--blanco);
+}
+
+.category {
+    display: inline-block;
+    padding: 5px 12px;
+    color: var(--azul);
+    background-color: #dff7f5;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.event-card p {
+    color: var(--gris);
+}
+
+.event-information {
+    margin: 12px 0;
+    padding-left: 20px;
+    color: var(--gris);
+    list-style-position: outside;
+}
+
+.event-information li {
+    margin-bottom: 5px;
+}
+
+/* =====================================
+   8. DETALLE DEL EVENTO
+===================================== */
+
+.event-detail {
+    padding: 20px;
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+}
+
+.detail-list {
+    margin-top: 20px;
+    list-style: none;
+}
+
+.detail-list li {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--borde);
+}
+
+.detail-list strong {
+    color: var(--azul);
+}
+
+.detail-list span {
+    color: var(--gris);
+}
+
+.register-button {
+    margin-top: 25px;
+    min-height: 52px;
+}
+
+/* =====================================
+   9. CONFIRMACIÓN DE INSCRIPCIÓN
+===================================== */
+
+.confirmation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.success-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 76px;
+    height: 76px;
+    margin: 20px auto;
+    color: var(--azul);
+    background-color: #dff7f5;
+    border: 3px solid var(--verde-menta);
+    border-radius: 50%;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.success-message {
+    color: var(--verde-oscuro);
+    font-weight: bold;
+}
+
+.confirmation-card {
+    width: 100%;
+    padding: 20px;
+    margin: 25px 0;
+    background-color: #edf3fc;
+    border-radius: 12px;
+    text-align: left;
+}
+
+.confirmation-card h2 {
+    margin-top: 12px;
+}
+
+.confirmation-note {
+    margin-bottom: 15px;
+    color: var(--gris);
+}
+
+/* =====================================
+   10. FOOTER
+===================================== */
+
+.screen-footer {
+    margin-top: auto;
+    padding-top: 25px;
+}
+
+.screen-footer nav {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 4px;
+    padding-top: 12px;
+    border-top: 1px solid var(--borde);
+}
+
+.screen-footer a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 5px 2px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.screen-footer a:hover,
+.screen-footer a[aria-current="page"] {
+    color: var(--azul);
+    background-color: #dff7f5;
+}
+
+/* =====================================
+   11. DISEÑO RESPONSIVE
+===================================== */
+
+@media (max-width: 700px) {
+
+    .app {
+        padding: 15px 10px;
+    }
+
+    .screens {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .screen {
+        min-height: 680px;
+        padding: 20px;
+        border-radius: 14px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .screen-footer a {
+        font-size: 11px;
+    }
+}
+
+/* =====================================
+   12. REDUCIR MOVIMIENTO
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
